@@ -1,0 +1,13 @@
+.discover {
+  padding: 0 var(--spacing-xxs) 0 var(--spacing-xxs); 
+}
+
+.discover ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.discover ul > li {
+  display: inline-block;
+}
