@@ -1,5 +1,6 @@
 import { importMapsPlugin } from '@web/dev-server-import-maps';
 import { defaultReporter } from '@web/test-runner';
+import { chromeLauncher } from '@web/test-runner-chrome';
 
 function customReporter() {
   return {
@@ -24,6 +25,13 @@ export default {
     ],
   },
   plugins: [importMapsPlugin({})],
+  browsers: [
+    chromeLauncher({
+      launchOptions: {
+        executablePath: '/usr/bin/google-chrome'
+      },
+    }),
+  ],
   reporters: [
     defaultReporter({ reportTestResults: true, reportTestProgress: true }),
     customReporter(),
